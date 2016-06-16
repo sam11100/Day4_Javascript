@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>	
+	<h1>Movie QUIZ GAME:</h1>
+	<h3>How many Tomb Raider movies were made?</h3>
+	<form>
+  <input type="radio" id="q1a1"  name="gender" value="One" checked> One<br>
+  <input type="radio" id="q1a2" name="gender" value="Two"> Two<br>
+  <input type="radio" id="q1a3" name="gender" value="who cares"> who cares
+  </form>
+  <form>
+
+  	<h3>Which malformation did Marilyn Monroe have when she was born?</h3>
+  <input type="radio" id="q2a1"  name="gender" value="Six toes" checked> Six toes<br>
+  <input type="radio" id="q2a2" name="gender" value="three nipples"> three nipples<br>
+  <input type="radio" id="q2a3" name="gender" value="ugly face"> ugly face
+  </form>
+  <form>
+  <h3>Who was Mozart s great rival in Amadeus movie?</h3>
+  <input type="radio" id="q3a1" name="gender" value=" Antonio Salieri" checked> Antonio Salieri<br>
+  <input type="radio" id="q3a2" name="gender" value="Justin Bieber"> Justin Bieber<br>
+  <input type="radio" id="q3a3" name="gender" value="Robert Peterson "> Robert Peterson 
+</form>
+<div id="display"></div>
+
+	<button id="btn">SUBMIT</button>
+
+
+		<script>
+			
+
+		var event1 = document.getElementById('btn');
+		event1.addEventListener('click',quiz,false);
+		
+
+       
+
+		document.getElementById("q1a1").checked ==false;
+		
+		function quiz(){
+			var i = 0;
+			var rq1a1 = document.getElementById("q1a1");
+			var rq1a2 = document.getElementById("q1a2");
+			var rq1a3 = document.getElementById("q1a3");
+
+			if(rq1a1.checked==true){
+			 var q1a1 = rq1a1.value;
+       		
+       		}else if(rq1a2.checked==true){
+       		 var q1a2 = rq1a2.value;
+       		 	
+       		 i++;
+       		}else{
+       		 var q1a3 = rq1a3.value;
+       		 
+       		}
+
+
+       		var rq2a1 = document.getElementById("q2a1");
+			var rq2a2 = document.getElementById("q2a2");
+			var rq2a3 = document.getElementById("q2a3");
+
+			if(rq2a1.checked==true){
+			 var q2a1 = rq2a1.value;
+       			
+       		 i++;
+       		}else if(rq2a2.checked==true){
+       		 var q2a2 = rq2a2.value;
+       		 
+       		}else{
+       		 var q2a3 = rq2a3.value;
+       		 
+       		}
+
+       		var rq3a1 = document.getElementById("q3a1");
+			var rq3a2 = document.getElementById("q3a2");
+			var rq3a3 = document.getElementById("q3a3");
+
+			if(rq3a1.checked==true){
+			 var q3a1 = rq3a1.value;	
+       		 i++;
+       		 
+       		}else if(rq3a2.checked==true){
+       		 var q3a2 = rq3a2.value;
+       		 
+       		 i++;
+       		}else{
+       		 var q3a3 = rq3a3.value;
+       		 
+       		}
+
+       		if (i == 0) {
+       			document.getElementById('display').innerHTML = ' YOU ARE SHIT!!! your Score is '+i+' Out of 3';
+       		}else if(i == 1){
+       			document.getElementById('display').innerHTML = ' POOR!!! your Score is '+i+' Out of 3';
+
+       		}else if(i == 2){
+       			document.getElementById('display').innerHTML = ' GOOD BUT NOT QUIET CARLIN!!! your Score is '+i+' Out of 3';
+       		}else{
+       			document.getElementById('display').innerHTML = ' WELLDONE FULL MARKS!!! your Score is '+i+' Out of 3';
+       		}
+       		
+
+        } 
+			
+		
+
+
+
+
+		</script>
+
+</body>
+</html>

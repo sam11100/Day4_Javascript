@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">	
+</head>
+	<style>
+	body{
+		font-family: "Lucida Bright", Georgia, serif;
+	}
+		.heading-title{
+			
+			background-color: grey;
+			padding-bottom: 10%;
+			display: none;
+
+		}
+
+
+	</style>
+<body>
+
+<div class="container">
+
+<div class="jumbotron heading-title">
+	
+	<div id="winner" style="color:white;font-size:1000%;font-weight:lighter;letter-spacing:10px;"></div> 
+	
+</div>
+	<h1 style="font-size:300%;">RANDOM NAME GENERATOR :</h1>
+	 
+
+	
+
+
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-danger" id="submit" ype="button">Add</button>
+      </span>
+      <input type="text" class="form-control" id="array_1" >
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  <div class="col-lg-6">
+    <div class="input-group">
+         <button id="btn" class="btn btn-success">Generate A Winner</button><br/>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="display" style="color:red;font-size:500%;font-weight:lighter;"></div>  
+   
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+	<script>	
+			var event1 = document.getElementById('submit');
+     		event1.addEventListener('click',arrays,false);
+     		var event2 = document.getElementById('btn');
+     		event2.addEventListener('click',randomName,false);
+			var names = []; 
+	
+			
+
+			function arrays(){
+				var user_input = document.getElementById('array_1').value;
+				names.push(user_input);
+				document.getElementById('display').innerHTML = names;
+
+			}	
+			function randomName(){
+				
+				var rand = Math.floor(Math.random()*names.length);
+				 
+				 	document.getElementById('winner').innerHTML = names[rand]+'!!';
+		}
+
+		$(window).ready(function(){
+
+				$('#btn').on('click',function(){
+					$('.heading-title').toggle(1000);
+				});
+
+		});
+
+
+</script>
+</body>
+</html>
